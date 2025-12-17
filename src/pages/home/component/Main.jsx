@@ -130,7 +130,7 @@ const Main = ({ images, product, testimonials, sec }) => {
             </button>
           </span>
           <span className="">
-            <img className="" src="Wooden Chair.png" alt="" />
+            <img className="" src="Wicker Hanging Chair.png" alt="" />
           </span>
         </div>
         <div className="bg-blue-100 h-[50vh] w-[90vh]  text-xl flex items-center">

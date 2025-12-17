@@ -35,9 +35,9 @@ const HomePage = () => {
        image:"Sofa Chair.png"
     },
     {
-       name:"Wooden Chair",
+       name:"Wicker Hanging Chair",
        price:120.99,
-       image:"Wooden Chair.png"
+       image:"Wicker Hanging Chair.png"
     },
     {
        name:"Design Chair",
