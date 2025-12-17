@@ -7,9 +7,9 @@ import {Facebook,Twitter,Linkedin,Instagram, Phone, MapPin } from 'lucide-react'
 const HomePage = () => {
 
   const images=[
-    "img1.png",
-    "img2.png",
-    "img3.png",
+    "img9.png",
+    "img10.png",
+    "img11.png",
   ]
 
   const product =[
