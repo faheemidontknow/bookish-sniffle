@@ -26,7 +26,7 @@ const Main = ({ images, product, testimonials, sec }) => {
   const [SwiperRef3, setSwiperRef3] = useState(null);
   return (
     <main>
-      <section className="bg-[#ece5dc8a] h-[140vh] px-20 pt-20  flex items-center">
+      <section className="bg-[#ece5dc8a] h-[140vh] px-20 pt-20   justify-between flex items-center">
         <span>
           <p className="  w-37 py-1.5 px-3 bg-[#ede1d1a5] font-semibold text-[#C79A63] ">
             NEW ARRIVAL...
