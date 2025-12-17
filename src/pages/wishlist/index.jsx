@@ -6,19 +6,19 @@ import Main from './component/main'
 const WishLIst = () => {
   const cartItems = [
   {
-    name: "Alexander Sofa",
+    name: "Arm Chair",
     price: 24,
-    image: "img3.png",
+    image: "Arm Chair.png",
   },
   {
-    name: "Curaskin Lipgel",
+    name: "Brasslegged Chair",
     price: 12,
-    image: "img2.png",
+    image: "Brasslegged Chair.png",
   },
   {
-    name: "Leather Chair",
+    name: "Cotton Chair",
     price: 42,
-    image: "img6.png",
+    image: "Cotton Chair.png",
   },
 ];
 

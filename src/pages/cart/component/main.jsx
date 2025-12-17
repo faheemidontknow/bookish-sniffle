@@ -12,9 +12,15 @@ const Main = ({ cartItems }) => {
     <main>
       <TopSection title={"Cart"} />
       {!cartItems ? (
-        <div className="h-screen w-screen flex items-center flex-col  gap-1 justify-center">
-          <div className="h-16 w-1 animate-spin bg-[#C79A63] rounded-full"></div>
-          <p className="text-xl ">Getting carts ...</p>
+        <div className="h-screen w-screen flex flex-col items-center justify-center gap-4">
+          <img
+            src="sapa.png"
+            alt=""
+            className="h-[60vh] w-[90vh]  animate-spin"
+            style={{ filter: "drop-shadow(0 0 0 #C79A63)" }}
+          />
+
+          <p className="text-2xl   text-[#C79A63]">Getting carts ...</p>
         </div>
       ) : (
         <section className="px-12 pt-24 ">

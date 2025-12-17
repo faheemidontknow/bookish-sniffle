@@ -11,13 +11,13 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-black/90 h-[95vh] bottom-0 text-white">
+    <footer className="bg-black/90 flex flex-col justify-center items-center  h-[95vh] bottom-0 text-white">
       <div className="px-20 py-16 ">
         <section className="flex  gap-14">
           <div>
             <div className="flex text-3xl items-center font-bold">
               <Armchair size={40} className="items-center pr-1 flex " />
-              <a href="#"> ADDINA</a>
+              <a href="#"> OLLYRAY</a>
             </div>
             <p className=" pt-7 font-light text-gray-400 text-xl">
               It helps designers plan out where <br /> the content will sit, the
@@ -25,8 +25,8 @@ const Footer = () => {
             </p>
             <span className="gap-4 pt-8 flex">
               {icons.map((icon) => (
-                <button className="gap-4 borde flex  px-2 py-2 hover:bg-[#C79A63] hover:text-white hover:fill-white bg-white rounded-full">
-                  <a className=" flex gap-4" href="#">
+                <button className="gap-4 borde flex  px-2 py-2  hover:bg-[#C79A63] hover:text-white hover:fill-white bg-white rounded-full">
+                  <a className="  flex gap-4" href="#">
                     {icon}
                   </a>
                 </button>

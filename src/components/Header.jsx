@@ -59,7 +59,7 @@ const Header = () => {
         <div className="flex gap-7">
           <div className="flex text-3xl items-center font-bold">
             <Armchair size={40} className="items-center pr-1 flex" />
-            ADDINA
+            OLLYRAY
           </div>
 
           <span className="flex">
@@ -99,8 +99,13 @@ const Header = () => {
         </div>
 
         <span className="flex gap-4 items-center cursor-pointer">
-            <Link to="/wishlist"><Heart size={25} /></Link>
-            <Link to="/cart"> <ShoppingBagIcon size={25} /></Link>
+          <Link to="/wishlist">
+            <Heart size={25} />
+          </Link>
+          <Link to="/cart">
+            {" "}
+            <ShoppingBagIcon size={25} />
+          </Link>
 
           <AlignLeft size={35} onClick={() => setOpen(true)} />
         </span>
@@ -119,19 +124,20 @@ const Header = () => {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* <div className="flex justify-end">
+        <div className="flex justify-between items-center pt-14 pb-7">
+           <span className="flex text-2xl font-bold gap-2 ">
+            <Armchair className="mt-1" />
+            <h1 className="">OLLYRAY</h1>
+          </span>
           <button
-            className="bg-[#C79A63] p-2 rounded-full"
+            className="bg-[#C79A63]  text-2xl p-2 rounded-full"
             onClick={() => setOpen(false)}
           >
             <X size={22} />
           </button>
-        </div> */}
+         
+        </div>
 
-        <span className="flex text-2xl font-bold mt-6 mb-6 gap-2">
-          <Armchair className="mt-1" />
-          <h1 className="">ADDINA</h1>
-        </span>
         <hr className="text-gray-600" />
 
         <div className="flex items-center justify-between pt-10 border-b border-gray-600 pb-3 mb-6">
