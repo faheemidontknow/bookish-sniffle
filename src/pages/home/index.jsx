@@ -7,16 +7,16 @@ import {Facebook,Twitter,Linkedin,Instagram, Phone, MapPin } from 'lucide-react'
 const HomePage = () => {
 
   const images=[
-    "img9.png",
-    "img10.png",
-    "img11.png",
+    "Sofa.png",
+    "Design Chair.png",
+    "Cotton Chair.png",
   ]
 
   const product =[
     {
-       name:"Trendy Chair",
+       name:"Sofa",
        price:120.99,
-       image:"Trendy Chair.png"
+       image:"Sofa.png"
     },
  
     {
@@ -45,9 +45,9 @@ const HomePage = () => {
        image:"Design Chair.png"
     },
     {
-       name:"Vercel Chair",
+       name:"Twist Chair",
        price:120.99,
-       image:"vercel Chair.png"
+       image:"Twist Chair.png"
     },
     {
        name:"Cotton Chair",

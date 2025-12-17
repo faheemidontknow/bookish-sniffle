@@ -52,7 +52,7 @@ const Main = ({ images, product, testimonials, sec }) => {
             </button>
           </span>
         </span>
-        <span className="bg-[#c79a63a1] h-120 w-120 ml-27 mb-27 flex items-center justify-center rounded-full">
+        <span className="bg-[#c79a63a1] h-120 w-120  flex items-center justify-center rounded-full">
           <div className="absolute h-96 w-[80vh]  flex  items-center justify-center pl-8  ">
             <img
               className="absolute flex items-center justify-center "
@@ -130,7 +130,7 @@ const Main = ({ images, product, testimonials, sec }) => {
             </button>
           </span>
           <span className="">
-            <img className="" src="img5.png" alt="" />
+            <img className="" src="Wooden Chair.png" alt="" />
           </span>
         </div>
         <div className="bg-blue-100 h-[50vh] w-[90vh]  text-xl flex items-center">
@@ -146,7 +146,7 @@ const Main = ({ images, product, testimonials, sec }) => {
             </button>
           </span>
           <span className="">
-            <img className=" " src="img4.png" alt="" />
+            <img className=" " src="Sofa Chair.png" alt="" />
           </span>
         </div>
       </section>
