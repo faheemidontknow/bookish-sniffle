@@ -16,7 +16,7 @@ import {
   Youtube,
   Linkedin,
 } from "lucide-react";
-import { links, nav1, nav12, nav13, pages } from "../constants/home";
+import { links, nav1, nav12, nav13, pages,home } from "../constants/home";
 import { Link } from "react-router";
 
 const Header = () => {
