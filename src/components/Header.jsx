@@ -16,7 +16,7 @@ import {
   Youtube,
   Linkedin,
 } from "lucide-react";
-import { links, nav1, nav12, nav13, pages,home } from "../constants/home";
+import { links, nav1, nav12, nav13, pages, home } from "../constants/home";
 import { Link } from "react-router";
 
 const Header = () => {
@@ -31,40 +31,44 @@ const Header = () => {
 
   return (
     <header className="relative">
-      <div className="flex bg-[#C79A63] h-11 justify-between  items-center text-white px-20">
+      {/* TOP HEADER */}
+      <div className="hidden lg:flex bg-[#C79A63] h-11 justify-between items-center text-white px-20">
         <span className="gap-2 flex items-center cursor-pointer">
           <PhoneCall size={15} />
-          {nav1.map((item) => (
-            <p>{item}</p>
+          {nav1.map((item, index) => (
+            <p key={index}>{item}</p>
           ))}
         </span>
 
         <span className="font-bold">
-          {nav12.map((item2) => (
-            <p>{item2}</p>
+          {nav12.map((item2, index) => (
+            <p key={index}>{item2}</p>
           ))}
         </span>
 
         <span className="flex gap-3 items-center ml-18 cursor-pointer">
-          {nav13.map((item3) => (
-            <>
+          {nav13.map((item3, index) => (
+            <div key={index} className="flex items-center">
               <p>{item3}</p>
               <ChevronDown size={20} />
-            </>
+            </div>
           ))}
         </span>
       </div>
 
-      <div className="bg-white gap-3 flex h-19 px-20 justify-between">
-        <div className="flex gap-7">
-          <div className="flex text-3xl items-center font-bold">
+      {/* MAIN HEADER */}
+      <div className="bg-white gap-3 flex h-19 px-5 lg:px-20 justify-between items-center">
+        <div className="flex gap-7 items-center">
+          {/* LOGO */}
+          <div className="flex text-2xl lg:text-3xl items-center font-bold">
             <Armchair size={40} className="items-center pr-1 flex" />
             OLLYRAY
           </div>
 
-          <span className="flex">
+          {/* DESKTOP NAV */}
+          <span className="hidden lg:flex">
             {links.map((linkitem, index) => (
-              <div className="flex relative">
+              <div key={index} className="flex relative">
                 <Link
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseOut={() => setIsHover(false)}
@@ -73,18 +77,19 @@ const Header = () => {
                 >
                   {linkitem}
                 </Link>
+
                 {index === 3 && isHover && (
                   <div
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseOut={() => setIsHover(false)}
-                    className=""
                   >
-                    <span className=" flex  flex-col absolute z-50 -bottom-36 left-2.5  bg-white">
-                      {pages.map((pageitem) => (
+                    <span className="flex flex-col absolute z-50 -bottom-36 left-2.5 bg-white">
+                      {pages.map((pageitem, pageIndex) => (
                         <Link
+                          key={pageIndex}
                           onMouseEnter={() => handleMouseEnter(index)}
                           onMouseOut={() => setIsHover(false)}
-                          className="hover:bg-[#C79A63] font-semibold py-3 pl-3  pr-24 text-nowrap  border-b  border-b-gray-300 hover:text-white"
+                          className="hover:bg-[#C79A63] font-semibold py-3 pl-3 pr-24 text-nowrap border-b border-b-gray-300 hover:text-white"
                           to={"/findastore"}
                         >
                           {pageitem}
@@ -98,66 +103,102 @@ const Header = () => {
           </span>
         </div>
 
+        {/* RIGHT ICONS */}
         <span className="flex gap-4 items-center cursor-pointer">
           <Link to="/wishlist">
             <Heart size={25} />
           </Link>
+
           <Link to="/cart">
-            {" "}
             <ShoppingBagIcon size={25} />
           </Link>
 
+          {/* MENU BUTTON ALWAYS THERE */}
           <AlignLeft size={35} onClick={() => setOpen(true)} />
         </span>
       </div>
 
+      {/* OVERLAY */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/80 bg-opacity-50  z-40"
+          className="fixed inset-0 bg-black/80 z-40"
           onClick={() => setOpen(false)}
         />
       )}
 
+      {/* SIDEBAR */}
       <div
-        className={`fixed top-0 right-0 h-full w-[400px] bg-[#111] border-l-[#C79A63] border-l-2 text-white z-50 p-6 
-        transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-[90%] sm:w-[400px] bg-[#111] border-l-[#C79A63] border-l-2 text-white z-50 p-6 
+        transition-transform duration-300 overflow-y-auto ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        {/* TOP */}
         <div className="flex justify-between items-center pt-14 pb-7">
-           <span className="flex text-2xl font-bold gap-2 ">
+          <span className="flex text-2xl font-bold gap-2">
             <Armchair className="mt-1" />
-            <h1 className="">OLLYRAY</h1>
+            <h1>OLLYRAY</h1>
           </span>
+
           <button
-            className="bg-[#C79A63]  text-2xl p-2 rounded-full"
+            className="bg-[#C79A63] text-2xl p-2 rounded-full"
             onClick={() => setOpen(false)}
           >
             <X size={22} />
           </button>
-         
         </div>
 
         <hr className="text-gray-600" />
 
+        {/* MOBILE NAV LINKS */}
+        <div className="flex flex-col gap-5 pt-8 border-b border-gray-700 pb-8">
+          {links.map((linkitem, index) => (
+            <div key={index} className="flex flex-col">
+              <Link
+                to={`/${linkitem.toLowerCase()}`}
+                className="font-semibold hover:text-[#C79A63] duration-300"
+                onClick={() => setOpen(false)}
+              >
+                {linkitem}
+              </Link>
+
+              {/* DROPDOWN PAGES */}
+              {index === 3 && (
+                <div className="flex flex-col gap-3 pl-4 pt-3">
+                  {pages.map((pageitem, pageIndex) => (
+                    <Link
+                      key={pageIndex}
+                      to="/findastore"
+                      className="text-sm text-gray-300 hover:text-[#C79A63]"
+                      onClick={() => setOpen(false)}
+                    >
+                      {pageitem}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* SEARCH */}
         <div className="flex items-center justify-between pt-10 border-b border-gray-600 pb-3 mb-6">
           <input
             type="text"
             placeholder="What are you searching for?"
-            className=" w-full  text-sm text-white font-semibold"
+            className="w-full text-sm text-white font-semibold bg-transparent outline-none"
           />
           <Search size={18} />
         </div>
 
         <h2 className="text-xl pt-8 font-bold mb-4">Contact Info</h2>
 
-        <div className="flex items-center  gap-3 mb-4">
+        <div className="flex items-center gap-3 mb-4">
           <MapPin
             size={35}
-            className=" border px-2  py-2 rounded-full hover:bg-[#C79A63] hover:border-0 duration-300"
+            className="border px-2 py-2 rounded-full hover:bg-[#C79A63] hover:border-0 duration-300"
           />
-          <p className=" hover:text-[#C79A63] duration-300 font-bold pl-2">
-            {" "}
+          <p className="hover:text-[#C79A63] duration-300 font-bold pl-2">
             12/A, Mirnada City Tower, NYC
           </p>
         </div>
@@ -165,9 +206,9 @@ const Header = () => {
         <div className="flex items-center gap-3 mb-4">
           <Phone
             size={35}
-            className=" border px-2  py-2 rounded-full hover:bg-[#C79A63] hover:border-0 duration-300"
+            className="border px-2 py-2 rounded-full hover:bg-[#C79A63] hover:border-0 duration-300"
           />
-          <p className=" hover:text-[#C79A63] duration-300 font-bold pl-2">
+          <p className="hover:text-[#C79A63] duration-300 font-bold pl-2">
             +088889797697
           </p>
         </div>
@@ -175,18 +216,22 @@ const Header = () => {
         <div className="flex items-center gap-3 mb-6">
           <Mail
             size={35}
-            className=" border px-2  py-2 rounded-full hover:bg-[#C79A63] hover:border-0 duration-300"
+            className="border px-2 py-2 rounded-full hover:bg-[#C79A63] hover:border-0 duration-300"
           />
-          <p className=" hover:text-[#C79A63] duration-300 font-bold pl-2">
+          <p className="hover:text-[#C79A63] duration-300 font-bold pl-2">
             support@mail.com
           </p>
         </div>
 
+        {/* SOCIALS */}
         <div className="flex gap-2 mt-6">
-          <Facebook className="p-2 border border-gray-700 rounded-full w-10 h-10 text-[#C79A63] fill-[#C79A63]  hover:bg-[#C79A63] duration-300 hover:text-white hover:fill-white" />
-          <Twitter className="p-2 border border-gray-700 rounded-full w-10 h-10 text-[#C79A63] fill-[#C79A63]  hover:bg-[#C79A63] duration-300 hover:text-white hover:fill-white" />
-          <Youtube className="p-2 border border-gray-700 rounded-full w-10 h-10 text-[#C79A63]  hover:bg-[#C79A63] duration-300 hover:text-white" />
-          <Linkedin className="p-2 border border-gray-700 rounded-full w-10 h-10 text-[#C79A63] fill-[#C79A63]  hover:bg-[#C79A63] duration-300 hover:text-white hover:fill-white" />
+          <Facebook className="p-2 border border-gray-700 rounded-full w-10 h-10 text-[#C79A63] fill-[#C79A63] hover:bg-[#C79A63] duration-300 hover:text-white hover:fill-white" />
+
+          <Twitter className="p-2 border border-gray-700 rounded-full w-10 h-10 text-[#C79A63] fill-[#C79A63] hover:bg-[#C79A63] duration-300 hover:text-white hover:fill-white" />
+
+          <Youtube className="p-2 border border-gray-700 rounded-full w-10 h-10 text-[#C79A63] hover:bg-[#C79A63] duration-300 hover:text-white" />
+
+          <Linkedin className="p-2 border border-gray-700 rounded-full w-10 h-10 text-[#C79A63] fill-[#C79A63] hover:bg-[#C79A63] duration-300 hover:text-white hover:fill-white" />
         </div>
       </div>
     </header>
