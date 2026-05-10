@@ -370,24 +370,27 @@ const Main = ({ images, product, testimonials, sec }) => {
           ))}
         </div>
       </section>
-      <section className="w-full grid md:grid-cols-2 gap-8 px-4 md:px-20 py-10">
+      <section className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-20 py-10">
         <div
-          className="relative   text-white w-full h-[550px] flex bg-center items-center  px-8 py-8 "
+          className="relative text-white w-full py-12 flex bg-center items-center px-4 md:px-8 bg-cover"
           style={{ backgroundImage: "url('img51.jpg')" }}
         >
-          <div className="border px-28 py-15 flex flex-col items-center    pt-24  h-[480px]">
-            <div className=" space-y-3">
-              <p className=" text-sm opacity-70 font-semibold space-y-3">
+          <div className="border w-full md:w-auto px-6 md:px-28 py-10 flex flex-col items-center pt-16 md:pt-24 min-h-[420px] md:h-[480px]">
+            <div className="space-y-3 text-center md:text-left">
+              <p className="text-sm opacity-70 font-semibold">
                 HOT DEAL FURNITURE
               </p>
-              <h1 className="text-4xl md:text-4xl font-bold">
+
+              <h1 className="text-3xl md:text-4xl font-bold">
                 Furniture Limit
               </h1>
-              <p className="text-4xl font-bold">
-                Offer <br /> <span className="font-bold">30% Off</span>
+
+              <p className="text-3xl md:text-4xl font-bold">
+                Offer <br />
+                <span className="font-bold">30% Off</span>
               </p>
 
-              <button className="mt-4   border flex gap-3 px-5 py-3  hover:bg-[#c79a63] hover:border-0  transition">
+              <button className="mt-4 border flex gap-3 px-5 py-3 hover:bg-[#c79a63] hover:border-0 transition">
                 BUY NOW
                 <ChevronRight />
               </button>
@@ -396,36 +399,40 @@ const Main = ({ images, product, testimonials, sec }) => {
         </div>
 
         <div
-          className="relative bg-center text-white w-full h-[550px] flex items-center justify-center px-8 py-8 "
+          className="relative bg-center text-white w-full min-h-[550px] flex items-center justify-center px-4 md:px-8 py-8 bg-cover"
           style={{ backgroundImage: "url('img50.jpg')" }}
         >
-          <div className="border px-28 py-15   h-[480px]">
-            <div className="text-center space-y-4">
+          <div className="border w-full md:w-auto px-6 md:px-28 py-10 min-h-[420px] md:h-[480px] flex items-center">
+            <div className="text-center space-y-4 w-full">
               <p className="tracking-widest text-sm opacity-70">
                 HOT DEAL FURNITURE
               </p>
-              <h1 className="text-3xl  font-extrabold">Deals Of The Week</h1>
 
-              <div className="flex justify-center gap-4 mt-4">
+              <h1 className="text-3xl font-extrabold">Deals Of The Week</h1>
+
+              <div className="flex justify-center gap-4 mt-4 flex-wrap">
                 <div className="text-center">
                   <p className="text-2xl font-bold">21</p>
                   <span className="text-sm opacity-70">DAYS</span>
                 </div>
+
                 <div className="text-center">
                   <p className="text-2xl font-bold">14</p>
                   <span className="text-sm opacity-70">HRS</span>
                 </div>
+
                 <div className="text-center">
                   <p className="text-2xl font-bold">50</p>
                   <span className="text-sm opacity-70">MINS</span>
                 </div>
+
                 <div className="text-center">
                   <p className="text-2xl font-bold">02</p>
                   <span className="text-sm opacity-70">SECS</span>
                 </div>
               </div>
 
-              <button className="mt-4  ml-17 border flex gap-3 px-5 py-3  hover:bg-[#c79a63] hover:border-0  transition">
+              <button className="mt-4 border flex gap-3 px-5 py-3 hover:bg-[#c79a63] hover:border-0 transition mx-auto">
                 BUY NOW
                 <ChevronRight />
               </button>
