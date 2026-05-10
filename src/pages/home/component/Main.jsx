@@ -60,7 +60,7 @@ const Main = ({ images, product, testimonials, sec }) => {
 
         {/* IMAGE SIDE */}
         <span className="bg-[#c79a63a1] h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] lg:h-[480px] lg:w-[480px] flex items-center justify-center rounded-full relative self-center">
-          <div className="absolute h-[250px] sm:h-[320px] lg:h-96 w-full flex items-center justify-center px-5">
+          <div className="absolute h-[250px] sm:h-80 lg:h-96 w-full flex items-center justify-center px-5">
             <img
               className="absolute flex items-center justify-center object-contain w-full h-full"
               src={images[index]}
