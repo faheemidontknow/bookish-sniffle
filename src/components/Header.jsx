@@ -57,7 +57,7 @@ const Header = () => {
       </div>
 
       {/* MAIN HEADER */}
-      <div className="bg-white gap-3 flex h-19 px-5 lg:px-20 justify-between items-center">
+      <div className="bg-white fixed  gap-3 flex h-19 px-5 lg:px-20 justify-between items-center">
         <div className="flex gap-7 items-center">
           {/* LOGO */}
           <div className="flex text-2xl lg:text-3xl items-center font-bold">
