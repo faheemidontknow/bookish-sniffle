@@ -4,58 +4,65 @@ import Footer from "../../components/Footer";
 import Main from "./components/main";
 
 const ShopPage = () => {
-  const ShopImages = [
+  const shopImages = [
     {
-      image: "img1.png",
+      image: "Arm Chair.png",
       brand: "ACCESSORIES",
       name: "Alexander Sofa",
       price: "$34.00",
       tag: "10% off",
     },
     {
-      image: "img2.png",
+      image: "Arm Chair.png",
+
       brand: "ACCESSORIES",
       name: "Alexander Sofa",
       price: "$34.00",
       tag: "10% off",
     },
     {
-      image: "img3.png",
+      image: "Arm Chair.png",
+
       brand: "ACCESSORIES",
       name: "Alexander Sofa",
       price: "$34.00",
       tag: "10% off",
     },
     {
-      image: "img4.png",
+      image: "Arm Chair.png",
+
       brand: "ACCESSORIES",
       name: "Alexander Sofa",
       price: "$34.00",
       tag: "10% off",
     },
     {
-      image: "img5.png",
+      image: "Arm Chair.png",
+
       brand: "ACCESSORIES",
       name: "Alexander Sofa",
       price: "$34.00",
       tag: "10% off",
     },
     {
-      image: "img6.png",
+      image: "Arm Chair.png",
+
       brand: "ACCESSORIES",
       name: "Alexander Sofa",
       price: "$34.00",
       tag: "10% off",
     },
     {
-      image: "img7.png",
+      image: "Arm Chair.png",
+
       brand: "ACCESSORIES",
       name: "Alexander Sofa",
       price: "$34.00",
       tag: "10% off",
     },
     {
-      image: "img8.png",
+      image: "Arm Chair.png",
+
       brand: "ACCESSORIES",
       name: "Alexander Sofa",
       price: "$34.00",
@@ -65,7 +72,7 @@ const ShopPage = () => {
   return (
     <div>
       <Header />
-      <Main ShopImages={ShopImages} />
+      <Main shopImages={shopImages} />
       <Footer />
     </div>
   );

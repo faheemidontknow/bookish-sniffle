@@ -5,9 +5,9 @@ const Main = () => {
   return (
     <main>
       <TopSection title={"Find A Store"} />
-      <section className="px-20 pt-32 gap-12 flex">
+      <section className="lg:px-20 lg:pt-32 lg:gap-12 flex lg:flex-row flex-col gap-12 px-5 py-12">
         <div>
-          <div className="bg-[#f7e9d8b4]  px-9 py-9 h-[300px] w-[85vh]">
+          <div className="bg-[#f7e9d8b4]  px-9 py-9 h-[300px] lg:w-[85vh] w-full">
             <span className="flex justify-between">
               <h3 className="font-semibold text-2xl">California</h3>
               <p className="font-semibold text-2xl text-[#C79A63]">01</p>
@@ -39,12 +39,12 @@ const Main = () => {
           <img className="h-[105vh] w-[500px]" src="img61.jpg" alt="" />
         </div>
       </section>
-      <section className=" pb-28 px-20 pt-12 gap-12 flex">
+      <section className=" lg:pb-28 lg:px-20 lg:pt-12 lg:gap-12 flex lg:flex-row flex-col gap-12 px-5 py-12">
         <div className="">
           <img className="h-[105vh] w-[500px]" src="img61.jpg" alt="" />
         </div>
         <div>
-          <div className="bg-[#f7e9d8b4]  px-9 py-9 h-[300px] w-[85vh]">
+          <div className="bg-[#f7e9d8b4]  px-9 py-9 h-[300px] lg:w-[85vh] w-full">
             <span className="flex justify-between">
               <h3 className="font-semibold text-2xl">New York</h3>
               <p className="font-semibold text-2xl text-[#C79A63]">01</p>

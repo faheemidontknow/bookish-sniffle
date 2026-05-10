@@ -11,12 +11,12 @@ import {
 } from "lucide-react";
 import TopSection from "../../../components/TopSection";
 
-const Main = ({ ShopImages }) => {
+const Main = ({ shopImages }) => {
   return (
     <main>
       <TopSection title={"Product"}/>
-      <section className="px-20 pt-24">
-        <div className="flex justify-between">
+      <section className="lg:px-20 px-5 lg:pt-24  py-12">
+        <div className="flex lg:flex-row flex-col lg:gap-0 gap-2.5 justify-between">
           <span>
             <h4 className="text-xl font-semibold">20 item on the List</h4>
           </span>
@@ -52,19 +52,19 @@ const Main = ({ ShopImages }) => {
         gap-8
       "
         >
-          {ShopImages.map((item, index) => (
+          {shopImages.map((object, index) => (
             <div
               key={index}
               className="flex flex-col border items-center   h-[78vh] border-black/10"
             >
               <div className="relative group bg-white group    p-6 flex flex-col items-center justify-center overflow-hidden">
                 <img
-                  src={item.image}
-                  alt={item.name}
+                  src={object.image}
+                  alt={object.name}
                   className="w-50 h-50 object-contain mt-15  duration-500 hover:scale-115"
                 />
                 <button className="bg-[#C79A63] rounded-full px-2  absolute  top-6 left-3 text-white">
-                  {item.tag}
+                  {object.tag}
                 </button>
 
                 <div
@@ -93,12 +93,12 @@ const Main = ({ ShopImages }) => {
               </div>
 
               <div className=" text-semibold border-t  border-t-black/10 w-full pl-5 py-5 mt-2 flex flex-col ">
-                <p className="text-[#C79A63]   font-light">{item.brand}</p>
+                <p className="text-[#C79A63]   font-light">{object.brand}</p>
                 <h3 className="text-xl font-semibold  hover:text-[#c79a63] ">
-                  {item.name}
+                  {object.name}
                 </h3>
                 <p className="text-[#c79a63] text-xl font-semibold">
-                  {item.price}
+                  {object.price}
                 </p>
               </div>
             </div>

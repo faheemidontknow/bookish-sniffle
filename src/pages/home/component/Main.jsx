@@ -673,7 +673,7 @@ const Main = ({ images, product, testimonials, sec }) => {
       </section>
       <section className="flex lg:flex-row items-center  justify-center flex-col lg:px-25 px-5 lg:gap-24 gap-6 lg:py-28 py-14">
         {sec.map((sec2) => (
-          <img className="h-20w-28" src={sec2} alt="" />
+          <img className="h-20 w-28" src={sec2} alt="" />
         ))}
       </section>
     </main>

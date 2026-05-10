@@ -5,8 +5,8 @@ import TopSection from "../../../components/TopSection";
 const Main = () => {
   return (
     <main>
-      <TopSection title={"Contact"}  />
-      <section class="px-20 py-20 ">
+      <TopSection title={"Contact"} />
+      <section class="lg:px-20 lg:py-20 px-5 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           <div>
             <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#c58b5a] flex items-center justify-center text-white text-xl">
@@ -20,7 +20,7 @@ const Main = () => {
             </p>
           </div>
 
-          <div className="">
+          <div className="lg:w-[33.333%] w-full">
             <div class="w-16 h-16 mx-auto mb-4  rounded-full bg-[#c58b5a] flex items-center justify-center text-white text-xl">
               <Mail />
             </div>
@@ -45,38 +45,41 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <section className="flex  px-20 pt-7 pb-28 gap-10">
-        <div>
-          <img className="h-[110vh] w-[98vh]" src="img70.jpg" alt="" />
+      <section className="flex flex-col lg:flex-row px-5 lg:px-20 pt-7 pb-28 gap-10">
+        <div className="w-full">
+          <img className="h-auto lg:h-[110vh] w-full" src="img70.jpg" alt="" />
         </div>
 
-        <div className="bg-[#C79A63] h-[99vh] w-[95vh] px-20 py-16">
-          <div className="flex gap-6  mb-6">
+        <div className="bg-[#C79A63] w-full lg:w-[95vh] lg:px-20 lg:py-16 px-5 py-12">
+          <div className="flex flex-col lg:flex-row gap-6 mb-6">
             <input
               type="text"
               placeholder="Full Name*"
-              className="w-[40vh] p-4  outline-none bg-white"
+              className="w-full lg:w-[40vh] px-4 py-4 outline-none bg-white"
             />
+
             <input
               type="email"
               placeholder="Email Address*"
-              className="w-[40vh] p-4  outline-none bg-white"
+              className="w-full lg:w-[40vh] px-4 py-4 outline-none bg-white"
             />
           </div>
 
-          
-          <div className="flex gap-6 mb-6">
+          <div className="flex flex-col lg:flex-row gap-6 mb-6">
             <input
               type="tel"
               placeholder="Phone Number"
-              className="w-[40vh] p-4  bg-white outline-none"
+              className="w-full lg:w-[40vh] px-4 py-4 bg-white outline-none"
             />
-            <input type="date" className="w-[40vh] bg-white p-4  outline-none" />
+
+            <input
+              type="date"
+              className="w-full lg:w-[40vh] bg-white p-4 outline-none"
+            />
           </div>
 
-          
-          <div className="flex gap-6 w-full mb-6">
-            <select className="w-[50vh] bg-white p-4  outline-none">
+          <div className="flex flex-col lg:flex-row gap-6 w-full mb-6">
+            <select className="w-full lg:w-[50vh] bg-white p-4 outline-none">
               <option>Pediatric Clinic</option>
               <option>Etihad Clinic</option>
               <option>Etihad Clinic</option>
@@ -84,7 +87,8 @@ const Main = () => {
               <option>Etihad Clinic</option>
               <option>Etihad Clinic</option>
             </select>
-            <select className="w-[50vh] bg-white p-4  outline-none">
+
+            <select className="w-full lg:w-[50vh] bg-white p-4 outline-none">
               <option>Choose Doctor</option>
               <option>Dr.Erling Haaland</option>
               <option>Dr.Erling Haaland</option>
@@ -100,7 +104,7 @@ const Main = () => {
             className="w-full p-4 h-40 bg-white outline-none mb-6"
           />
 
-          <button className="flex items-center gap-2 font-semibold text-xl  text-white px-6 py-3 rounded-md">
+          <button className="flex items-center gap-2 font-semibold text-xl text-white px-6 py-3 rounded-md">
             SEND NOW
             <ChevronRight size={18} />
           </button>
